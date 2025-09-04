@@ -1,0 +1,31 @@
+{
+  "name": "sistema-autenticacion-monorepo",
+  "version": "1.0.0",
+  "description": "Sistema de autenticación con Express.js y React usando pnpm workspaces",
+  "main": "index.js",
+  "packageManager": "pnpm@8.0.0",
+  "scripts": {
+    "dev": "concurrently \"pnpm run dev:be\" \"pnpm run dev:fe\"",
+    "dev:be": "pnpm --filter backend-express dev",
+    "dev:fe": "pnpm --filter frontend-react dev",
+    "start:be": "pnpm --filter backend-express start",
+    "start:fe": "pnpm --filter frontend-react start",
+    "build": "pnpm --filter frontend-react build",
+    "install:all": "pnpm install",
+    "test": "pnpm --filter backend-express test && pnpm --filter frontend-react test"
+  },
+  "keywords": [
+    "express",
+    "react",
+    "authentication",
+    "jwt",
+    "sqlite",
+    "monorepo",
+    "pnpm"
+  ],
+  "author": "SENA Project",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

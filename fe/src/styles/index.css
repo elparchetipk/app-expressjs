@@ -1,0 +1,126 @@
+/* src/styles/index.css - Estilos principales con Tailwind CSS */
+
+/**
+ * IMPORTACIÓN DE TAILWIND CSS
+ * 
+ * Estas tres directivas importan todas las utilidades de Tailwind:
+ * 
+ * @tailwind base: Reset CSS + estilos base para elementos HTML
+ * @tailwind components: Clases de componentes (si las defines)
+ * @tailwind utilities: Todas las clases utilitarias (text-center, bg-blue-500, etc.)
+ * 
+ * ¿Por qué Tailwind CSS?
+ * - Utility-first: clases pequeñas y reutilizables
+ * - No CSS personalizado: todo se hace con clases
+ * - Responsive design: breakpoints incluidos (sm:, md:, lg:)
+ * - Tree-shaking: solo incluye las clases que uses en producción
+ * - Consistencia: sistema de design predefinido
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * ESTILOS PERSONALIZADOS PARA LA APLICACIÓN
+ * 
+ * Aquí agregamos estilos que Tailwind no cubre o que queremos
+ * personalizar para toda la aplicación.
+ */
+
+/* Fuente del sistema para mejor rendimiento y legibilidad */
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', 'Roboto', 'Ubuntu',
+    'Cantarell', 'Noto Sans', sans-serif;
+}
+
+/**
+ * ANIMACIÓN PERSONALIZADA PARA EL LOADING SPINNER
+ * 
+ * Definimos una animación de rotación que usaremos en el componente LoadingSpinner
+ */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 1s linear infinite;
+}
+
+/**
+ * ESTILOS PARA INPUTS CON FOCUS
+ * 
+ * Mejoramos la experiencia visual cuando el usuario interactúa con formularios
+ */
+.input-focus {
+  @apply focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200;
+}
+
+/**
+ * CLASE UTILITARIA PARA BOTONES PRIMARIOS
+ * 
+ * Usando @apply podemos crear componentes reutilizables con Tailwind
+ */
+.btn-primary {
+  @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg
+         transition-colors duration-200 focus:outline-none focus:ring-2 
+         focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 
+         disabled:cursor-not-allowed;
+}
+
+.btn-secondary {
+  @apply bg-gray-600 hover:bg-gray-700 text-white font-medium py-2 px-4 rounded-lg
+         transition-colors duration-200 focus:outline-none focus:ring-2 
+         focus:ring-gray-500 focus:ring-offset-2;
+}
+
+/**
+ * CLASE PARA MENSAJES DE ERROR
+ */
+.error-message {
+  @apply text-red-600 text-sm mt-1 font-medium;
+}
+
+/**
+ * CLASE PARA MENSAJES DE ÉXITO
+ */
+.success-message {
+  @apply text-green-600 text-sm mt-1 font-medium;
+}
+
+/**
+ * CONTENEDOR PRINCIPAL DE LA APLICACIÓN
+ */
+.app-container {
+  @apply min-h-screen bg-gray-50 flex flex-col;
+}
+
+/**
+ * ESTILOS PARA TARJETAS (CARDS)
+ */
+.card {
+  @apply bg-white rounded-lg shadow-md p-6 border border-gray-200;
+}
+
+.card-header {
+  @apply border-b border-gray-200 pb-4 mb-6;
+}
+
+/**
+ * RESPONSIVE BREAKPOINTS DE TAILWIND:
+ * 
+ * sm: 640px+   (tablets)
+ * md: 768px+   (desktop pequeño)
+ * lg: 1024px+  (desktop)
+ * xl: 1280px+  (desktop grande)
+ * 2xl: 1536px+ (desktop muy grande)
+ * 
+ * Ejemplo de uso:
+ * <div class="text-sm md:text-base lg:text-lg">
+ *   Texto que cambia de tamaño según la pantalla
+ * </div>
+ */

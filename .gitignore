@@ -1,0 +1,414 @@
+# ===============================
+# GITIGNORE ROBUSTO - PROYECTO EDUCATIVO
+# Sistema de Autenticación Multi-Framework
+# ===============================
+
+# ===============================
+# ARCHIVOS DEL SISTEMA OPERATIVO
+# ===============================
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# ===============================
+# NODE.JS / JAVASCRIPT
+# ===============================
+
+# Dependencias
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Directorios de runtime
+.pnpm-store/
+.yarn/
+.npm/
+
+# Archivos de lockfile (opcional - mantener solo uno)
+# package-lock.json
+# yarn.lock
+
+# Logs
+logs/
+*.log
+
+# Cache de npm
+.npm/
+.eslintcache
+
+# Coverage de testing
+coverage/
+nyc_output/
+.nyc_output/
+
+# Build de frontend
+dist/
+build/
+out/
+
+# ===============================
+# PYTHON / FLASK / FASTAPI
+# ===============================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# celery beat schedule file
+celerybeat-schedule
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# ===============================
+# BASES DE DATOS
+# ===============================
+
+# SQLite
+*.sqlite
+*.sqlite3
+*.db
+*.db3
+
+# MySQL
+*.mysql
+
+# PostgreSQL
+*.pgsql
+
+# MongoDB
+*.mongodb
+
+# Redis
+dump.rdb
+
+# ===============================
+# ARCHIVOS DE CONFIGURACIÓN SENSIBLES
+# ===============================
+
+# Variables de entorno
+.env
+.env.*
+!.env.example
+
+# Archivos de configuración con secretos
+config/local.js
+config/local.json
+config/production.js
+config/production.json
+config/secrets.js
+config/secrets.json
+
+# Certificados y llaves
+*.pem
+*.key
+*.crt
+*.cert
+*.p12
+*.pfx
+
+# JWT secrets
+jwt-secret.txt
+private.key
+public.key
+
+# ===============================
+# HERRAMIENTAS DE DESARROLLO
+# ===============================
+
+# IDEs y Editores
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+.netrwhist
+
+# ===============================
+# DOCKER
+# ===============================
+
+# Docker
+Dockerfile.local
+docker-compose.override.yml
+.dockerignore
+
+# ===============================
+# HERRAMIENTAS DE BUILD
+# ===============================
+
+# Webpack
+.webpack/
+
+# Parcel
+.parcel-cache/
+
+# Vite
+.vite/
+
+# Rollup
+.rollup.cache/
+
+# ESBuild
+.esbuild/
+
+# ===============================
+# TESTING
+# ===============================
+
+# Jest
+jest.config.local.js
+.jest/
+
+# Cypress
+cypress/screenshots/
+cypress/videos/
+cypress/downloads/
+
+# Playwright
+test-results/
+playwright-report/
+
+# ===============================
+# MONITOREO Y LOGS
+# ===============================
+
+# Logs generales
+logs/
+*.log
+error.log
+access.log
+combined.log
+
+# PM2
+.pm2/
+
+# Forever
+.forever/
+
+# ===============================
+# ARCHIVOS TEMPORALES
+# ===============================
+
+# Archivos temporales
+tmp/
+temp/
+.tmp/
+.temp/
+
+# Backups
+*.bak
+*.backup
+*.old
+
+# ===============================
+# ARCHIVOS ESPECÍFICOS DEL PROYECTO
+# ===============================
+
+# Base de datos local del proyecto
+database.sqlite
+database.db
+users.db
+
+# Uploads de usuarios
+uploads/
+public/uploads/
+
+# Cache de la aplicación
+.cache/
+cache/
+
+# Archivos de sesión
+sessions/
+
+# ===============================
+# CLOUD Y DEPLOYMENT
+# ===============================
+
+# Vercel
+.vercel
+
+# Netlify
+.netlify/
+
+# Firebase
+.firebase/
+firebase-debug.log
+
+# AWS
+.aws/
+
+# Heroku
+.heroku/
+
+# Railway
+.railway/
+
+# ===============================
+# MOBILE
+# ===============================
+
+# React Native
+.expo/
+.expo-shared/
+
+# ===============================
+# OPCIONAL - DESCOMENTA SI NECESITAS
+# ===============================
+
+# Si usas TypeScript y quieres ignorar archivos compilados
+# *.js
+# *.js.map
+
+# Si usas Sass/SCSS y tienes archivos compilados
+# *.css
+# *.css.map
+
+# Si generas documentación automáticamente
+# docs/
+
+# ===============================
+# NOTAS IMPORTANTES
+# ===============================
+
+# 1. NUNCA commitear .env files con datos reales
+# 2. SIEMPRE incluir .env.example con variables de ejemplo
+# 3. Usar .env.local para desarrollo local
+# 4. En producción, usar variables de entorno del sistema
+# 5. Revisar este archivo periódicamente para mantenerlo actualizado
